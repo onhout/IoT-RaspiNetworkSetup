@@ -16,9 +16,9 @@ while True:
 
         if counter == 9:
             os.system('sudo rm -f /etc/wpa_supplicant/wpa_supplicant.conf')
-            os.system('rm -f /usr/share/configure_wifi/tmp/*')
+            os.system('sudo rm -f /usr/share/configure_wifi/tmp/*')
             os.system('sudo cp -r /usr/share/configure_wifi/Reset_Device/static_files/dhcpcd.conf /etc/')
-            os.system('sudo cp -r /usr/share/configure_wifi/Reset_Device/static_files/hostapd.conf /etc/hostapd/')
+            os.system('sudo cp -r /usr/share/configure_wifi/Reset_Device/static_files/hostapd.conf /etc/')
             os.system('sudo cp -r /usr/share/configure_wifi/Reset_Device/static_files/dnsmasq.conf /etc/dnsmasq.conf')
             os.system('sudo cp -r /usr/share/configure_wifi/Reset_Device/static_files/default_hostapd /etc/default/hostapd')
             os.system('sudo cp -r /usr/share/configure_wifi/Reset_Device/static_files/rc.local.aphost /etc/rc.local')
