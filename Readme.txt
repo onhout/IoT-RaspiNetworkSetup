@@ -29,7 +29,16 @@ sudo sh start.sh
 
 USAGE:
 
-== Connect to the "RaspiWiFi Setup" access point using any other WiFi enabled device.
+== Connect to the "RaspiWiFi Setup" access point using any other WiFi enabled device.  The default password is "password12345".  
+You can modify the SSID and password at /usr/share/configure_wifi/Reset_Device/static_files/hostapd.conf
+
+== If you run a non-stock /etc/rc.local, modify rc.local.apclient and rc.local.apclient.template /usr/share/configure_wifi/Reset_Device/static_files/
+/etc/rc.local will be overwritten EVERYTIME the system configured to act as a wifi access point for setting up a new network.
+If you happen to need a non-stock rc.local during the short time when the system is in the "configure wifi" configuration, modify rc.local.aphost and rc.local.aphost.template .
+
+If you happen to operate a service which needs port 80, such as the Apache Web Server, then you need to stop the process in rc.local.aphost and rc.local.aphost.template --BEFORE--
+su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 80 -d"
+An example is provided.
 
 == Navigate to http://10.0.0.1 using any web browser on the device you connected with.
 
