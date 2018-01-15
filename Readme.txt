@@ -1,3 +1,7 @@
+IF YOU SOMEHOW FOUND THIS, DON'T ATTEMPT TO USE IT AT THIS TIME.
+IT'S BROKEN AND A WORK IN PROGRESS!!!
+
+
 RaspiWiFi
 
 RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi 
@@ -9,13 +13,15 @@ tested with the Raspberry Pi B+, Raspberry Pi 3, and Raspberry Pi Zero W.
 
 INSTALLATION INSTRUCTIONS:
 
+Install RPI.GPIO, then:
+
 == Navigate to the directory you downloaded or cloned RaspiWiFi to
 
 == Run:
 
-sudo python3 initial_setup.py
+sudo start.sh
 
-== This script will install all necessary prerequisites, copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "RaspiWiFi Setup".
+== This script will install all necessary prerequisites (except RIP.GPIO), copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "RaspiWiFi Setup".
 
 
 
