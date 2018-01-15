@@ -18,5 +18,9 @@ if [ "$_IP" ]; then
 fi
 
 python3 /usr/share/configure_wifi/Reset_Device/reset.py &
+## Run Startup Test Pattern
+/usr/share/VFR-Map/startup-control.sh
+## Start Map LED Process
+/usr/share/VFR-Map/map-maintainer.sh &
 
 exit 0
