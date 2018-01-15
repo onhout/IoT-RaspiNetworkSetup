@@ -16,7 +16,8 @@ _IP=$(hostname -I) || true
 if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
-
+sudo systemctl stop dnsmasq
+sudo systemctl disable dnsmasq
 python3 /usr/share/configure_wifi/Reset_Device/reset.py &
 
 exit 0
