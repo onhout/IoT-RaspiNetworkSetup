@@ -6,7 +6,6 @@ import sys
 
 def install_prereqs():
 	project_path = os.path.dirname(os.path.abspath(__file__))
-	
 	print("Updating Apt...")
 	os.system('apt update')
 	print("Installing prerequisites via Apt...")
@@ -17,21 +16,21 @@ def install_prereqs():
 
 def update_config_paths():
 	project_path = os.path.dirname(os.path.abspath(__file__))
-
+    
 	os.system('sudo cp -a Reset_Device/static_files/rc.local.aphost.template Reset_Device/static_files/rc.local.aphost')
 	os.system('sudo cp -a Reset_Device/static_files/rc.local.apclient.template Reset_Device/static_files/rc.local.apclient')
 	os.system('sudo cp -a Reset_Device/reset.py.template Reset_Device/reset.py')
-
+    
 	with fileinput.FileInput("Reset_Device/static_files/rc.local.aphost", inplace=True) as file:
 		for line in file:
 			print(line.replace("[[project_dir]]", project_path), end='')
 		file.close
-
+    
 	with fileinput.FileInput("Reset_Device/static_files/rc.local.apclient", inplace=True) as file:
 		for line in file:
 			print(line.replace("[[project_dir]]", project_path), end='')
 		file.close
-
+    
 	with fileinput.FileInput("Reset_Device/reset.py", inplace=True) as file:
 		for line in file:
 			print(line.replace("[[project_dir]]", project_path), end='')
@@ -66,25 +65,24 @@ else:
 	print("===================================================")
 	print()
 	print()
-	
-print()
-print()
-print()
-print()
+	print()
+	print()
+	print()
+	print()
 run_setup_ans = input("Would you like to run the initial setup for RaspiWiFi? (y/n): ")
 
 if(run_setup_ans == 'y'):
 	print("Updating config files and copying them...")
 	update_config_paths()
-
+    
 	os.system('sudo rm -f /etc/wpa_supplicant/wpa_supplicant.conf')
 	os.system('rm -f ./tmp/*')
 	os.system('sudo cp -r ./Reset_Device/static_files/dhcpcd.conf.aphost /etc/')
-    os.system('sudo cp -r ./Reset_Device/static_files/dnsmasq.conf /etc/')
+	os.system('sudo cp -r ./Reset_Device/static_files/dnsmasq.conf /etc/')
 	os.system('sudo cp -r ./Reset_Device/static_files/hostapd.conf /etc/hostapd/')
 	os.system('sudo cp -r ./Reset_Device/static_files/rc.local.aphost /etc/rc.local')
-    os.system('sudo sudo service hostapd stop')
-    os.system('sudo sudo service hostapd disable')
+	os.system('sudo systemctl stop hostapd')
+	os.system('sudo systemctl disable hostapd')
 	os.system('sudo cp -r ./Reset_Device/static_files/default_hostapd /etc/default/hostapd')
 
 else:
