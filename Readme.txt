@@ -12,10 +12,6 @@ tested with the Raspberry Pi B+, Raspberry Pi 3, and Raspberry Pi Zero W.
 
 INSTALLATION INSTRUCTIONS:
 
-Install RPI.GPIO, then:
-
-== Navigate to the directory you downloaded or cloned RaspiWiFi to
-
 == To install:
 
 git clone https://github.com/bottleworks/RaspiWiFi.git

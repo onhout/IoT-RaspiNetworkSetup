@@ -9,7 +9,7 @@ def install_prereqs():
 	print("Updating Apt...")
 	os.system('apt update')
 	print("Installing prerequisites via Apt...")
-	os.system('apt install python3 bundler libsqlite3-dev dnsmasq nodejs hostapd libxml2-dev libxslt-dev -y')
+	os.system('apt install python3 bundler libsqlite3-dev dnsmasq nodejs rpi.gpio hostapd libxml2-dev libxslt-dev -y')
 	print("Installing necessary Ruby Gems. This can take a few minutes...")
 	os.system('gem install nokogiri --no-document -v 1.6.6.2 -- --use-system-libraries')
 	os.system('bundle install --gemfile=' + project_path + '/Configuration_App/Gemfile')
