@@ -16,9 +16,11 @@ Install RPI.GPIO, then:
 
 == Navigate to the directory you downloaded or cloned RaspiWiFi to
 
-== Run:
+== To install:
 
-sudo start.sh
+git clone https://github.com/bottleworks/RaspiWiFi.git
+cd cd RaspiWiFi
+sudo sh start.sh
 
 == This script will install all necessary prerequisites (except RPI.GPIO), copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "RaspiWiFi Setup".
 
