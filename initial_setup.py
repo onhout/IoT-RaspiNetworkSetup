@@ -76,10 +76,10 @@ if(run_setup_ans == 'y'):
 	update_config_paths()
     
 	os.system('sudo rm -f /etc/wpa_supplicant/wpa_supplicant.conf')
-	os.system('rm -f ./tmp/*')
+	os.system('sudo rm -f ./tmp/*')
 	os.system('sudo cp -r ./Reset_Device/static_files/dhcpcd.conf.aphost /etc/')
 	os.system('sudo cp -r ./Reset_Device/static_files/dnsmasq.conf /etc/')
-	os.system('sudo cp -r ./Reset_Device/static_files/hostapd.conf /etc/hostapd/')
+	os.system('sudo cp -r ./Reset_Device/static_files/hostapd.conf /etc/')
 	os.system('sudo cp -r ./Reset_Device/static_files/rc.local.aphost /etc/rc.local')
 	os.system('sudo systemctl stop hostapd')
 	os.system('sudo systemctl disable hostapd')
