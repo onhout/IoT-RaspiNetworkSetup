@@ -18,6 +18,9 @@ if [ "$_IP" ]; then
 fi
 sudo systemctl stop dnsmasq
 sudo systemctl disable dnsmasq
-python3 /usr/share/configure_wifi/Reset_Device/reset.py &
+/usr/bin/python3.5 /usr/share/configure_wifi/Reset_Device/reset.py &
+cp -r /usr/share/configure_wifi/Reset_Device/static_files/rc.local.apclient_running /etc/rc.local
+cp -r /usr/share/configure_wifi/Reset_Device/static_files/dhcpcd.conf.apclient /etc/dhcpcd.conf
+reboot
 
 exit 0
