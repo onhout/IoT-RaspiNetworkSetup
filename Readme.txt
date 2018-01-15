@@ -47,4 +47,5 @@ RESETTING THE DEVICE:
 
 == If GPIO 4 is pulled HIGH for 10 seconds or more the Raspberry Pi will reset all settings, reboot, and enter "Configuration Mode" again. It's useful to have a simple button wired on GPIO 4 to reset easily if moving to a new location, or if incorrect connection information is ever entered. Just press and hold for 10 seconds or longer.
 
-== You can also reset the device by running /usr/share/configure_wifi/initial_setup.py .
+== You can also reset the device by running: 
+sudo python3 /usr/share/configure_wifi/initial_setup.py
