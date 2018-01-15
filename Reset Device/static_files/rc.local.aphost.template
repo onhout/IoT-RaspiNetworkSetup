@@ -17,10 +17,11 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
+sudo systemctl enable dnsmasq
+sudo systemctl start dnsmasq
+hostapd -dd /etc/hostapd/hostapd.conf &
 python3 /usr/share/configure_wifi/Reset_Device/reset.py &
 
-su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 0.0.0.0 -e production -p 80 -d"
-
-hostapd -dd /etc/hostapd/hostapd.conf &
+su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 80 -d"
 
 exit 0
