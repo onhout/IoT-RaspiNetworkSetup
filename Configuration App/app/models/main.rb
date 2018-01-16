@@ -115,6 +115,8 @@ class Main < ActiveRecord::Base
         system ('sudo touch /etc/dnsmasq.conf')
         system ('sudo rm /etc/hostapd/hostapd.conf')
         system ('sudo touch /etc/hostapd/hostapd.conf')
+	system ('sudo systemctl disable dnsmasq')
+        system ('sudo systemctl disable hostapd')
 	elsif lsb_release_string.include?('stretch')
         system ('sudo rm /etc/default/hostapd')
         system ('sudo touch /etc/default/hostapd')
@@ -124,6 +126,9 @@ class Main < ActiveRecord::Base
         system ('sudo touch /etc/dnsmasq.conf')
         system ('sudo rm /etc/hostapd/hostapd.conf')
         system ('sudo touch /etc/hostapd/hostapd.conf')
+	system ('sudo systemctl disable dnsmasq')
+        system ('sudo systemctl disable hostapd')
+
 	end
 
     system ('sudo rm /etc/default/hostapd')
@@ -134,6 +139,8 @@ class Main < ActiveRecord::Base
     system ('sudo touch /etc/dnsmasq.conf')
     system ('sudo rm /etc/hostapd/hostapd.conf')
     system ('sudo touch /etc/hostapd/hostapd.conf')
+    system ('sudo systemctl disable dnsmasq')
+    system ('sudo systemctl disable hostapd')
     system ('sudo reboot')
   end
 
