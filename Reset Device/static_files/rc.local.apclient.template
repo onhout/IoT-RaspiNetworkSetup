@@ -16,11 +16,7 @@ _IP=$(hostname -I) || true
 if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
-sudo systemctl stop dnsmasq
-sudo systemctl disable dnsmasq
+
 /usr/bin/python3.5 /usr/share/configure_wifi/Reset_Device/reset.py &
-cp -r /usr/share/configure_wifi/Reset_Device/static_files/rc.local.apclient_running /etc/rc.local
-cp -r /usr/share/configure_wifi/Reset_Device/static_files/dhcpcd.conf.apclient /etc/dhcpcd.conf
-reboot
 
 exit 0
