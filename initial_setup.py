@@ -102,4 +102,6 @@ print()
 reboot_ans = input("Initial setup is complete. A reboot is required, would you like to do that now? (y/n): ")
 
 if(run_setup_ans == 'y' and reboot_ans == 'y'):
+	os.system('sudo systemctl enable dnsmasq')
+	os.system('sudo systemctl enable hostapd')
 	os.system('sudo reboot')
