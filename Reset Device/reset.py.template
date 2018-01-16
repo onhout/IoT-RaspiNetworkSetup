@@ -22,6 +22,8 @@ while True:
             os.system('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/dnsmasq.conf /etc/dnsmasq.conf')
             os.system('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/default_hostapd /etc/default/hostapd')
             os.system('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/rc.local.aphost /etc/rc.local')
+            os.system('sudo systemctl enable dnsmasq')
+            os.system('sudo systemctl enable hostapd')
             os.system('sudo reboot')
 
         if GPIO.input(4) == 0:
