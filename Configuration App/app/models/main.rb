@@ -107,38 +107,20 @@ class Main < ActiveRecord::Base
 	lsb_release_string = %x{lsb_release -a}
 	
 	if lsb_release_string.include?('jessie')
-        system ('sudo rm /etc/default/hostapd')
-        system ('sudo touch /etc/default/hostapd')
         system ('sudo cp -r ' + raspiwifi_path + '/Reset_Device/static_files/dhcpcd.conf.apclient /etc/dhcpcd.conf')
         system ('sudo cp -r ' + raspiwifi_path + '/Reset_Device/static_files/rc.local.apclient /etc/rc.local')
-        system ('sudo rm /etc/dnsmasq.conf')
-        system ('sudo touch /etc/dnsmasq.conf')
-        system ('sudo rm /etc/hostapd/hostapd.conf')
-        system ('sudo touch /etc/hostapd/hostapd.conf')
 	system ('sudo systemctl disable dnsmasq')
         system ('sudo systemctl disable hostapd')
 	elsif lsb_release_string.include?('stretch')
-        system ('sudo rm /etc/default/hostapd')
-        system ('sudo touch /etc/default/hostapd')
         system ('sudo cp -r ' + raspiwifi_path + '/Reset_Device/static_files/dhcpcd.conf.apclient /etc/dhcpcd.conf')
         system ('sudo cp -r ' + raspiwifi_path + '/Reset_Device/static_files/rc.local.apclient /etc/rc.local')
-        system ('sudo rm /etc/dnsmasq.conf')
-        system ('sudo touch /etc/dnsmasq.conf')
-        system ('sudo rm /etc/hostapd/hostapd.conf')
-        system ('sudo touch /etc/hostapd/hostapd.conf')
 	system ('sudo systemctl disable dnsmasq')
         system ('sudo systemctl disable hostapd')
 
 	end
 
-    system ('sudo rm /etc/default/hostapd')
-    system ('sudo touch /etc/default/hostapd')
     system ('sudo cp -r ' + raspiwifi_path + '/Reset_Device/static_files/dhcpcd.conf.apclient /etc/dhcpcd.conf')
     system ('sudo cp -r ' + raspiwifi_path + '/Reset_Device/static_files/rc.local.apclient /etc/rc.local')
-    system ('sudo rm /etc/dnsmasq.conf')
-    system ('sudo touch /etc/dnsmasq.conf')
-    system ('sudo rm /etc/hostapd/hostapd.conf')
-    system ('sudo touch /etc/hostapd/hostapd.conf')
     system ('sudo systemctl disable dnsmasq')
     system ('sudo systemctl disable hostapd')
     system ('sudo reboot')
@@ -147,6 +129,8 @@ class Main < ActiveRecord::Base
   def self.reset_all
     raspiwifi_path = find_raspiwifi_path()
     
+    system ('sudo rm -f /etc/wpa_supplicant/wpa_supplicant.conf.OLD')
+    system ('sudo mv /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf.OLD')
     system ('sudo rm -f /etc/wpa_supplicant/wpa_supplicant.conf')
     system ('rm -f ' + raspiwifi_path + '/tmp/*')
     system ('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/dhcpcd.conf.aphost /etc/dhcpcd.conf')
@@ -154,6 +138,8 @@ class Main < ActiveRecord::Base
     system ('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/dnsmasq.conf /etc/dnsmasq.conf')
     system ('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/default_hostapd /etc/default/hostapd')
     system ('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/rc.local.aphost /etc/rc.local')
+    system ('sudo systemctl enable dnsmasq')
+    system ('sudo systemctl enable hostapd')
     system ('sudo reboot')
 
   end
