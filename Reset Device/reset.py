@@ -23,8 +23,6 @@ while True:
             os.system('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/dnsmasq.conf /etc/dnsmasq.conf')
             os.system('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/default_hostapd /etc/default/hostapd')
             os.system('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/rc.local.aphost /etc/rc.local')
-            os.system('sudo chown root.root /etc/wpa_supplicant/wpa_supplicant.conf')
-            os.system('sudo chmod 600 /etc/wpa_supplicant/wpa_supplicant.conf')
             os.system('sudo chown root.netdev /etc/dhcpcd.conf')
             os.system('sudo chmod 664 /etc/dhcpcd.conf')
             os.system('sudo chown root.root /etc/hostapd/hostapd.conf')
