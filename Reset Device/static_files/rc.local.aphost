@@ -16,8 +16,7 @@ _IP=$(hostname -I) || true
 if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
-sudo systemctl enable dnsmasq
-sudo systemctl start dnsmasq
+
 sudo systemctl stop apache2
 hostapd -dd /etc/hostapd/hostapd.conf &
 python3 /usr/share/configure_wifi/Reset_Device/reset.py &
