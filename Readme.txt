@@ -33,10 +33,10 @@ You can modify the SSID and password at /usr/share/configure_wifi/Reset_Device/s
 If you happen to need a non-stock rc.local during the short time when the system is in the "configure wifi" configuration, modify rc.local.aphost and rc.local.aphost.template .
 
 If you happen to operate a service which needs port 80, such as the Apache Web Server, then you need to stop the process in rc.local.aphost and rc.local.aphost.template --BEFORE--
-su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 80 -d"
+su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 80 -d" &
 An example is provided.
 
-== Navigate to http://10.0.0.1 using any web browser on the device you connected with.
+== Navigate to http://10.0.0.1 using any web browser on the device you connected with.  It take several minutes before the server is ready to accept requests.  If you're connected to the Pi via wifi, it gave you an IP, but the web page is timing out, then just wait a couple minutes....
 
 == Select the WiFi connection you'd like your Raspberry Pi to connect to from the drop down list and enter its wireless password on the page provided. If no encryption is enabled, leave the password box blank.
 
