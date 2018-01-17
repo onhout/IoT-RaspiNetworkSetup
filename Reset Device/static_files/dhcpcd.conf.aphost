@@ -55,8 +55,5 @@ slaac private
 #interface eth0
 #fallback static_eth0
 
-
-# ONLY FOR HOSTAP SETUP!!!!
 interface wlan0
     static ip_address=10.0.0.1/24
-    static routers=10.0.0.1
