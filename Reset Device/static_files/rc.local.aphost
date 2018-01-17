@@ -17,10 +17,8 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
-sudo systemctl stop apache2
-hostapd -dd /etc/hostapd/hostapd.conf &
 python3 /usr/share/configure_wifi/Reset_Device/reset.py &
-
+sudo systemctl stop apache2
 su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 80 -d" &
 
 
