@@ -83,6 +83,16 @@ if(run_setup_ans == 'y'):
 	os.system('sudo cp ./Reset_Device/static_files/hostapd.conf /etc/hostapd/hostapd.conf')
 	os.system('sudo cp ./Reset_Device/static_files/default_hostapd /etc/default/hostapd')
 	os.system('sudo cp ./Reset_Device/static_files/rc.local.aphost /etc/rc.local')
+	os.system('sudo chown root.netdev /etc/dhcpcd.conf')
+	os.system('sudo chmod 664 /etc/dhcpcd.conf')
+	os.system('sudo chown root.root /etc/hostapd/hostapd.conf')
+	os.system('sudo chmod 644 /etc/hostapd/hostapd.conf')
+	os.system('sudo chown root.root /etc/dnsmasq.conf')
+	os.system('sudo chmod 644 /etc/dnsmasq.conf')
+	os.system('sudo chown root.root /etc/default/hostapd')
+	os.system('sudo chmod 644 /etc/default/hostapd')
+	os.system('sudo chown root.root /etc/rc.local')
+	os.system('sudo chmod 755 /etc/rc.local')
 
 else:
 	print()
