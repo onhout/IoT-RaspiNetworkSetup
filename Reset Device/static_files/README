@@ -1,6 +1,6 @@
 The ultimate locations of these files are:
 
-dhcpcd.conf - /etc/dhcpcd.conf
+dhcpcd.conf[.aphost][.apclient] - /etc/dhcpcd.conf
 hostapd.conf - /etc/hostapd/hostapd.conf
 default_hostapd - /etc/default/hostapd
 dnsmasq.conf - /etc/dnsmasq.conf
