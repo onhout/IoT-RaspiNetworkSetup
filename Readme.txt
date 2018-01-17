@@ -18,7 +18,7 @@ git clone https://github.com/bottleworks/RaspiWiFi.git
 cd RaspiWiFi
 sudo sh start.sh
 
-== This script will install all necessary prerequisites (except RPI.GPIO), copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "RaspiWiFi Setup".
+== This script will install all necessary prerequisites, copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "RaspiWiFi Setup".
 
 
 
