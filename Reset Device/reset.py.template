@@ -15,6 +15,7 @@ while True:
         print(counter)
 
         if counter == 9:
+            os.system('sudo rm -f /etc/wpa_supplicant/wpa_supplicant.conf.OLD')
             os.system('sudo mv /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf.OLD')
             os.system('sudo rm -f /usr/share/configure_wifi/tmp/*')
             os.system('sudo cp /usr/share/configure_wifi/Reset_Device/static_files/dhcpcd.conf.aphost /etc/dhcpcd.conf')
