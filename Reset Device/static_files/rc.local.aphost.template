@@ -18,7 +18,7 @@ if [ "$_IP" ]; then
 fi
 
 python3 /usr/share/configure_wifi/Reset_Device/reset.py &
-sudo systemctl stop apache2
+systemctl stop apache2
 su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 80 -d" &
 
 exit 0
