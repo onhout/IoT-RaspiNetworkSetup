@@ -1,52 +1,10 @@
 The ultimate locations of these files are:
 
 dhcpcd.conf[.aphost][.apclient] - /etc/dhcpcd.conf
+rc.local[.aphost][.apclient] - /etc/rc.local
 hostapd.conf - /etc/hostapd/hostapd.conf
 default_hostapd - /etc/default/hostapd
 dnsmasq.conf - /etc/dnsmasq.conf
-rc.local[.aphost][.apclient] - /etc/rc.local
 
 *.aphost denotes files used when in configuration mode
 *.apclient denotes files used when in regular use mode
-
-
-My Notes Below...
-Configure the Host AP static IP at:  /etc/dhcpcd.conf
-# ONLY FOR HOSTAP SETUP!!!!
-interface wlan0
-    static ip_address=10.0.0.1/24
-
-
----------------------
-
-Configure DHCP SERVER at: /etc/dnsmasq.conf
-
-interface=wlan0      # Use the require wireless interface - usually wlan0
-  dhcp-range=10.0.0.2,10.0.0.20,255.255.255.0,24h
-
----------------------
-
-Add file for HOSTAP: /etc/hostapd/hostapd.conf
-
-interface=wlan0
-driver=nl80211
-ssid=name of ssid
-hw_mode=g
-channel=7
-# MIGHT be able to use channel 0 for auto channel
-wmm_enabled=0
-macaddr_acl=0
-auth_algs=1
-ignore_broadcast_ssid=0
-wpa=2
-wpa_passphrase=thepasswordforap
-wpa_key_mgmt=WPA-PSK
-wpa_pairwise=TKIP
-rsn_pairwise=CCMP
-
----------------------
-
-Update: sudo nano /etc/default/hostapd
-with:
-
-DAEMON_CONF="/etc/hostapd/hostapd.conf"
