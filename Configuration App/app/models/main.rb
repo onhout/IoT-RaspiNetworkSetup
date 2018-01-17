@@ -93,6 +93,7 @@ class Main < ActiveRecord::Base
       temp_conf_file.puts
       temp_conf_file.puts 'network={'
       temp_conf_file.puts '	ssid="' + user_ssid + '"'
+      temp_conf_file.puts '	key_mgmt=NONE'
       temp_conf_file.puts '}'
     end
 
