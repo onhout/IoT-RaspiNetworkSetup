@@ -2,7 +2,7 @@
 echo "Setting up file structure..."
 mv "Configuration App" Configuration_App
 mv "Reset Device" Reset_Device
-rm -r /usr/share/configure_wifi
+rm -rf /usr/share/configure_wifi
 mkdir /usr/share/configure_wifi
 cp -r * /usr/share/configure_wifi
 chmod 775 /usr/share/configure_wifi
