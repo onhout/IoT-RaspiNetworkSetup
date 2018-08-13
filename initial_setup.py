@@ -42,9 +42,9 @@ def update_config_paths():
 
 
 print()
-print("###################################")
-print("##### RaspiWiFi Intial Setup  #####")
-print("###################################")
+print("#####################################")
+print("##### RaspiWiFi Headless Setup  #####")
+print("#####################################")
 print()
 print()
 install_prereqs_ans = input("Would you like to install prerequisite files (This can take up to 5 minutes)? (y/n): ")
@@ -69,7 +69,7 @@ else:
 	print()
 	print()
 	print()
-run_setup_ans = input("Would you like to run the initial setup for RaspiWiFi? (y/n): ")
+run_setup_ans = input("Would you like to run the initial setup for Headless RaspiWiFi? (y/n): ")
 
 if(run_setup_ans == 'y'):
 	print("Updating config files and copying them...")
