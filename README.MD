@@ -1,13 +1,11 @@
-# Modify for IoT Projects, Easier Access#
-## RaspiWiFi: From MAKOMO with slight modifications##
+# HeadLess IoT Raspberry Pi X: Configure via WIFI Port 10
+## RaspiWiFi: From MAKOMO with slight modifications
 
-RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi 
-connection using using any other WiFi-enabled device (much like the way 
-a Chromecast or similar device can be configured). RaspiWiFi has been 
-tested with the Raspberry Pi B+, Raspberry Pi 3, and Raspberry Pi Zero W.
+RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi connection using using any other WiFi-enabled device (much like the way a Chromecast or similar device can be configured). RaspiWiFi has been tested with the Raspberry Pi B+, Raspberry Pi 3, and Raspberry Pi Zero W.
 
---  This version has been updated for use in Raspbian stretch (as of November 2017 release) --
---  This version no longer effects /etc/network/interfaces.  It now configures via /etc/dhcpcd.conf and runs dnsmasq for DNS server instead of isc-dhcp-server.  
+* This version has been updated for use in Raspbian stretch (as of November 2017 release).
+* This version no longer effects /etc/network/interfaces.  It now configures via /etc/dhcpcd.conf and runs dnsmasq for DNS server instead of isc-dhcp-server.
+
 
 
 
