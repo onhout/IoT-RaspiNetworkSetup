@@ -1,4 +1,4 @@
-RaspiWiFi
+#RaspiWiFi : Modified for IoT Device Projects#
 
 RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi 
 connection using using any other WiFi-enabled device (much like the way 
