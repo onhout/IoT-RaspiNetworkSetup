@@ -1,5 +1,5 @@
 #!/bin/sh -e
-echo "Setting up file structure..."
+echo "WiFi Headless Setup: Setting up file structure..."
 mv "Configuration App" Configuration_App
 mv "Reset Device" Reset_Device
 rm -rf /usr/share/configure_wifi
