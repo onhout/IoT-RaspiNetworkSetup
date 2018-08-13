@@ -1,21 +1,18 @@
-# HeadLess IoT WiFi Setup 4 Raspberry Pi X
+# HeadLess WiFi Setup for Raspberry Pi : IoT Type Projects
 ## RaspiWiFi: From Guided WiFi configuration software for the Raspberry Pi, Copyright (C) 2015 Jason Burgett jasbur@gmail.com with modifications from Makomo and this release
 
 RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi connection using using any other WiFi-enabled device (much like the way a Chromecast or similar device can be configured). RaspiWiFi has been tested with the Raspberry Pi B+, Raspberry Pi 3, and Raspberry Pi Zero W.
 
-* This version has been updated for use in Raspbian stretch (as of November 2017 release).
-* This version no longer effects /etc/network/interfaces.  It now configures via /etc/dhcpcd.conf and runs dnsmasq for DNS server instead of isc-dhcp-server.
+* This version has been updated for use in Raspbian Stretch (as of November 2017 release).
+* This version no longer effects */etc/network/interfaces*.  It now configures via */etc/dhcpcd.conf* and runs dnsmasq for DNS server instead of isc-dhcp-server.
 
+### INSTALLATION INSTRUCTIONS:
 
+*To install:*
 
-
-INSTALLATION INSTRUCTIONS:
-
-== To install:
-
-git clone https://github.com/marvmex/RaspiWiFi.git
+`git clone https://github.com/marvmex/RaspiWiFi.git
 cd RaspiWiFi
-sudo sh start.sh
+sudo sh start.sh`
 
 == This script will install all necessary prerequisites, copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "IoTMarv Setup".
 
