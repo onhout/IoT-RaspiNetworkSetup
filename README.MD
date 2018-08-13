@@ -1,5 +1,5 @@
-# HeadLess IoT Raspberry Pi X: Configure via WIFI Port 10
-## RaspiWiFi: From MAKOMO with slight modifications
+# HeadLess IoT WiFi Setup 4 Raspberry Pi X
+## RaspiWiFi: From Guided WiFi configuration software for the Raspberry Pi, Copyright (C) 2015 Jason Burgett jasbur@gmail.com with modifications from Makomo and this release
 
 RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi connection using using any other WiFi-enabled device (much like the way a Chromecast or similar device can be configured). RaspiWiFi has been tested with the Raspberry Pi B+, Raspberry Pi 3, and Raspberry Pi Zero W.
 
