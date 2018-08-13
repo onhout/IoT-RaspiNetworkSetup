@@ -1,9 +1,11 @@
 # Headless WiFi Setup for Raspberry Pi : IoT Type Projects
-#### RaspiWiFi: From Guided WiFi configuration software for the Raspberry Pi, Copyright (C) 2015 Jason Burgett jasbur@gmail.com with modifications from [Makomo](https://github.com/MAKOMO/) and this release mexmarv@gmail.com.
+### RaspiWiFi: From Guided WiFi configuration software for the Raspberry Pi, Copyright (C) 2015 Jason Burgett jasbur@gmail.com with modifications from [Makomo](https://github.com/MAKOMO/) and this release mexmarv@gmail.com.
 
 RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi connection using using any other WiFi-enabled device (much like the way a Chromecast or similar device can be configured). RaspiWiFi has been tested with the Raspberry Pi B+, Raspberry Pi 3, and Raspberry Pi Zero W.
 
-* This version has been updated for use in Raspbian Stretch (as of November 2017 release).
+* This version has been updated for use in Raspbian Stretch (as of July 2018 release).
+![Stretch Raspbian](https://octodex.github.com/images/yaktocat.png)
+
 * This version no longer affects `/etc/network/interfaces`.  It now configures via `/etc/dhcpcd.conf` and runs `dnsmasq` for DNS server instead of `isc-dhcp-server`.
 
 ### INSTALLATION INSTRUCTIONS:
