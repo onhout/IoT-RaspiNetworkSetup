@@ -1,4 +1,4 @@
-Modify fo IoT Easier access: RaspiWiFi
+Modify for IoT Easier access: RaspiWiFi
 
 RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi 
 connection using using any other WiFi-enabled device (much like the way 
@@ -18,7 +18,7 @@ git clone https://github.com/marvmex/RaspiWiFi.git
 cd RaspiWiFi
 sudo sh start.sh
 
-== This script will install all necessary prerequisites, copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "RaspiWiFi Setup".
+== This script will install all necessary prerequisites, copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the name "IoTMarv Setup".
 
 
 
