@@ -21,10 +21,10 @@ _This script will install all necessary prerequisites, copy configuration files,
 
 ### USAGE:
 
-* Connect to the "*pi-IoT*" access point using any other WiFi enabled device.
+* Connect to the `pi-IoT` SSID Open Access Point using any other WiFi enabled device.
 
-* If you run a non-stock /etc/rc.local, modify rc.local.apclient and rc.local.apclient.template /usr/share/configure_wifi/Reset_Device/static_files/
-* /etc/rc.local will be overwritten EVERYTIME the system configured to act as a wifi access point for setting up a new network.
+* If you run a non-stock **/etc/rc.local**, modify **rc.local.apclient** and **rc.local.apclient.template** in `/usr/share/configure_wifi/Reset_Device/static_files/`
+* `/etc/rc.local` will be overwritten EVERYTIME the system configured to act as a wifi access point for setting up a new network.
 * If you happen to need a non-stock rc.local during the short time when the system is in the "configure wifi" configuration, modify rc.local.aphost and rc.local.aphost.template.
 * su -c `"cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 10 -d" &`
 * If you happen to need a non-stock rc.local during the short time when the system is in the "configure wifi" configuration, modify rc.local.aphost and rc.local.aphost.template.
