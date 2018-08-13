@@ -19,7 +19,7 @@ _This script will install all necessary prerequisites, copy configuration files,
 
 ### USAGE:
 
-* Connect to the **`pi-IoT`** SSID Open Access Point using any other WiFi enabled device.
+* Connect to the **pi-IoT** SSID Open Access Point using any other WiFi enabled device.
 
 * If you run a non-stock **/etc/rc.local**, modify **rc.local.apclient** and **rc.local.apclient.template** in `/usr/share/configure_wifi/Reset_Device/static_files/`
 * `/etc/rc.local` will be overwritten **everytime** the system configured to act as a wifi access point for setting up a new network.
@@ -31,7 +31,7 @@ _This script will install all necessary prerequisites, copy configuration files,
 * Click the **Connect** button.
 * At this point your Raspberry Pi will reboot and connect to the access point specified.
 
-The files for this process are stored in **/usr/share/configure_wifi**.  
+The files for this process are stored in **/usr/share/configure_wifi** 
 
 ### RESETTING THE DEVICE:
 
