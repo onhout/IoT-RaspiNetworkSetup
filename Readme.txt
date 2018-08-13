@@ -1,4 +1,4 @@
-RaspiWiFi
+Modify fo IoT Easier access: RaspiWiFi
 
 RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi 
 connection using using any other WiFi-enabled device (much like the way 
@@ -14,7 +14,7 @@ INSTALLATION INSTRUCTIONS:
 
 == To install:
 
-git clone https://github.com/bottleworks/RaspiWiFi.git
+git clone https://github.com/marvmex/RaspiWiFi.git
 cd RaspiWiFi
 sudo sh start.sh
 
@@ -25,15 +25,15 @@ sudo sh start.sh
 
 USAGE:
 
-== Connect to the "RaspiWiFi Setup" access point using any other WiFi enabled device.  The default password is "password12345".  
-You can modify the SSID and password at /usr/share/configure_wifi/Reset_Device/static_files/hostapd.conf
+== Connect to the "IoT Marv" access point using any other WiFi enabled device.
 
 == If you run a non-stock /etc/rc.local, modify rc.local.apclient and rc.local.apclient.template /usr/share/configure_wifi/Reset_Device/static_files/
 /etc/rc.local will be overwritten EVERYTIME the system configured to act as a wifi access point for setting up a new network.
 If you happen to need a non-stock rc.local during the short time when the system is in the "configure wifi" configuration, modify rc.local.aphost and rc.local.aphost.template .
 
-If you happen to operate a service which needs port 80, such as the Apache Web Server, then you need to stop the process in rc.local.aphost and rc.local.aphost.template --BEFORE--
-su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 80 -d" &
+Default port 10 now to setup WiFi
+
+su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 10 -d" &
 An example is provided.
 
 == Navigate to http://10.0.0.1 using any web browser on the device you connected with.  It take several minutes before the server is ready to accept requests.  If you're connected to the Pi via wifi, it gave you an IP, but the web page is timing out, then just wait a couple minutes....
