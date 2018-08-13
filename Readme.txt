@@ -1,4 +1,5 @@
-Modify for IoT Easier access: RaspiWiFi
+#Modify for IoT Projects, Easier Access#
+##RaspiWiFi: From MAKOMO with slight modifications##
 
 RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi 
 connection using using any other WiFi-enabled device (much like the way 
