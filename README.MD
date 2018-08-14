@@ -13,7 +13,7 @@ RaspiWiFi is a program to headlessly configure a Raspberry Pi's WiFi connection 
 *To install:*
 ```
 git clone https://github.com/marvmex/IoT-RaspiWiFi.git
-cd RaspiWiFi
+cd IoT-RaspiWiFi
 sudo sh start.sh
 ```
 
