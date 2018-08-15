@@ -19,14 +19,16 @@ sudo sh start.sh
 
 _This script will install all necessary prerequisites, copy configuration files, and reboot. When it finishes booting it should present itself in "Configuration Mode" as a WiFi access point with the SSID **pi-IoT**._
 
-### USAGE:
-
-* Connect to the **pi-IoT** SSID Open Access Point using any other WiFi enabled device.
+### OBSERVATIONS:
 
 * If you run a non-stock **/etc/rc.local**, modify **rc.local.apclient** and **rc.local.apclient.template** in `/usr/share/configure_wifi/Reset_Device/static_files/`
 * `/etc/rc.local` will be overwritten **everytime** the system configured to act as a wifi access point for setting up a new network.
 * If you happen to need a non-stock `rc.local` during the short time when the system is in the "Configure WiFi" configuration, modify `rc.local.aphost` and `rc.local.aphost.template`.
 * `su -c "cd /usr/share/configure_wifi/Configuration_App/ && rails s -b 10.0.0.1 -e production -p 10 -d" &`
+
+### USAGE:
+
+* Connect to the **pi-IoT** SSID Open Access Point using any other WiFi enabled device.
 * Navigate to http://10.0.0.1:10 **(Port:10 IP:10.0.0.1)** using any web browser on the device you connected with. It may take several seconds (or a minute) before the server is ready to accept requests.  
 * If you're connected to the RasPi via WiFi, it will give you an IP in its network but the web page is timing out (web server still not loaded), then just wait a couple seconds till it appears (patiently)...
 * Select the **WiFi SSID** connection you'd like your Raspberry Pi to connect to from the drop down list and enter its wireless **password** on the page provided. If no encryption is enabled, leave the password box blank.
