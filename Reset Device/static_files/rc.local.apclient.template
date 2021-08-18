@@ -17,6 +17,6 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
-/usr/bin/python3.5 /usr/share/configure_wifi/Reset_Device/reset.py &
+/usr/bin/python3 /usr/share/configure_wifi/Reset_Device/reset.py &
 
 exit 0

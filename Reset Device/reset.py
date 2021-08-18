@@ -3,12 +3,12 @@ import os
 import time
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(4, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 counter = 0
 
 while True:
-    while GPIO.input(4) == 1:
+    while GPIO.input(22) == 1:
         time.sleep(1)
         counter = counter + 1
 
@@ -37,7 +37,7 @@ while True:
             os.system('sudo systemctl enable dnsmasq')
             os.system('sudo reboot')
 
-        if GPIO.input(4) == 0:
+        if GPIO.input(22) == 0:
             counter = 0
             break
 
